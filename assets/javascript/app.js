@@ -1,5 +1,6 @@
 var instruments = ["Bass Guitar", "Guitar", "Drums", "Vocals"];
 
+//draw the initial buttons
 function drawButtons() {
   for (var i = 0; i < instruments.length; i++) {
     var button = $('<button>' + instruments[i] + '</button>').addClass("instrument").attr('data-name', instruments[i]);
@@ -8,10 +9,11 @@ function drawButtons() {
 
 }
 
+//use AJAX to call the GIPHY api and display the images
 function displayInstrumentInfo() {
   var type = $(this).attr("data-name");
   console.log(type);
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=musical instrument " +
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=band " +
     type + "&api_key=dc6zaTOxFJmzC&limit=9";
 
     $("#images").empty();
@@ -48,7 +50,7 @@ function displayInstrumentInfo() {
 
 drawButtons();
 
-
+//add a new button based on user input
 $("#addButton").on("click", function () {
   event.preventDefault();
   var newInstrument = $("#item-input").val();
@@ -61,8 +63,10 @@ $("#addButton").on("click", function () {
   $('#addButton-form')[0].reset();
 });
 
+//event listener for displaying GIFs
 $(document).on("click", ".instrument", displayInstrumentInfo);
 
+//animate or stop each GIF
 $(document).on("click", ".theImage", function () {
   var state = $(this).attr('data-state');
   if (state == 'still') {

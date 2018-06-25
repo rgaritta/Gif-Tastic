@@ -1,3 +1,8 @@
+@font-face {
+    font-family: RockIt;
+    src: url(Rockit.ttf);
+}
+
 body {
     background: url(../images/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -9,7 +14,8 @@ body {
 
 .theImage {
     width: 250px;
-    height: 200px;;
+    height: 200px;
+    border: 1px solid black;
 }
 
 .theImage:hover {
@@ -17,7 +23,6 @@ body {
 }
 
 #buttons {
-
    text-align: center;
 }
 
@@ -49,8 +54,6 @@ body {
     margin:5px;
     background-color: rgba(255, 255, 255, 0.75);
     border: 2px solid black;
-    
-
 }
 
 #images {
@@ -72,9 +75,6 @@ p {
     text-align: center;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    
-    
-    
 }
 
 header {
@@ -88,7 +88,6 @@ header {
     margin-bottom: 10px;
     border: 2px solid black;
     padding: 10px 10px;
-    
 }
 
 h3, h1 {
@@ -103,6 +102,10 @@ h3, h1 {
     border: 2px solid black;
     padding: 10px 10px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: RockIt;
 }
 
 #container {
