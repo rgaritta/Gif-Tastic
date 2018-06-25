@@ -11,8 +11,10 @@ function drawButtons() {
 function displayInstrumentInfo() {
   var type = $(this).attr("data-name");
   console.log(type);
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    type + "&api_key=dc6zaTOxFJmzC&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=musical instrument " +
+    type + "&api_key=dc6zaTOxFJmzC&limit=9";
+
+    $("#images").empty();
 
   $.ajax({
     url: queryURL,
@@ -24,7 +26,7 @@ function displayInstrumentInfo() {
       for (var i = 0; i < results.length; i++) {
         var gifDiv = $("<div class='item'>");
 
-        var rating = results[i].rating;
+        var rating = (results[i].rating).toUpperCase();
 
         var p = $("<p>").text("Rating: " + rating);
 
@@ -39,6 +41,7 @@ function displayInstrumentInfo() {
         gifDiv.prepend(instrumentImage);
 
         $("#images").prepend(gifDiv);
+        
       }
     });
 }
@@ -55,6 +58,7 @@ $("#addButton").on("click", function () {
     $('#buttons').append(newButton);
     instruments.push(newInstrument);
   }
+  $('#addButton-form')[0].reset();
 });
 
 $(document).on("click", ".instrument", displayInstrumentInfo);
@@ -70,8 +74,3 @@ $(document).on("click", ".theImage", function () {
     $(this).attr('data-state', 'still');
   }
 });
-
-
-
-
-

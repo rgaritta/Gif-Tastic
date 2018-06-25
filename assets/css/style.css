@@ -1,0 +1,115 @@
+body {
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0px;
+}
+
+.theImage {
+    width: 250px;
+    height: 200px;;
+}
+
+.theImage:hover {
+    cursor: pointer;
+}
+
+#buttons {
+
+   text-align: center;
+}
+
+.instrument, #addButton {
+    margin: 5px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.instrument:hover, #addButton:hover {
+    background-color: black; /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+.item {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    float: left;
+    padding: 20px;
+    margin:5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 2px solid black;
+    
+
+}
+
+#images {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px
+}
+
+#addButton-form {
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+    
+}
+
+header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 0px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px 10px;
+    
+}
+
+h3, h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 95%;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display: block;
+    width: 960px;
+    overflow: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
