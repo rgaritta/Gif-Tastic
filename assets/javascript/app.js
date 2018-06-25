@@ -13,7 +13,7 @@ function drawButtons() {
 function displayInstrumentInfo() {
   var type = $(this).attr("data-name");
   console.log(type);
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=band " +
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     type + "&api_key=dc6zaTOxFJmzC&limit=9";
 
     $("#images").empty();
